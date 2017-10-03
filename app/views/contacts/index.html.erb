@@ -227,7 +227,19 @@ As is true for all other nouns in German, the word is written with an initial ca
 <section id="contact" style="display:flex ; justify-content:center ; background-color:#191919">
 	<div style="display:flex;width:60%">
 <div>
-<form id="lastform" style="margin:30px" action="/contacts/come" method="post">
+<%= form_for @contact do |f| %>
+<%= f.label :name ,"Add Name"%>
+<%= f.text_field  :name %>
+<%= f.label :email ,"Add email"%>
+<%= f.text_field  :email %>
+<%= f.label :message ,"Add Message"%>
+<%= f.text_area  :message %>
+<%= f.submit%>
+
+
+<%end%>
+
+<!-- <form id="lastform" style="margin:30px" action="/contacts/come" method="post">
 <label class="label">Name &nbsp;<span style="color:green"> *</span><pre>           </pre>
 <input type="text" class="inputs"></label>
 <label class="label">Email &nbsp;<span style="color:green"> *</span><pre>           </pre>
@@ -247,7 +259,7 @@ As is true for all other nouns in German, the word is written with an initial ca
 <label class="label"><pre>                  </pre>
 <input type="submit" value="Submit" style=" width: 80px; height: 30px; background-color: black; color: white; border: 0px; "></label>
 
-</form>
+</form> -->
 </div>
 <div id="sideview" style="margin-top:10px;display:grid;align-items:center;margin-left:5%">
 <p style="color:grey;font-family:sans-serif"><span style="color:white"><strong>Address and Phone</strong></span><br>Jonathon doe<br>Seattle<br>One Pieces<br>United States</p>

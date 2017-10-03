@@ -1,14 +1,20 @@
 class ContactsController < ApplicationController
   def index
 
+   @contact=Contact.new
+
+
 
 
   end
 
   def come
-  	print(params);
+  	
   end
 
+   def create
+   byebug
 
+   end
 
 end
